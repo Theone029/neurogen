@@ -1,0 +1,14 @@
+services:
+  freqtrade:
+    image: freqtradeorg/freqtrade:stable
+    container_name: freqtrade
+    volumes:
+      - ../clones/freqtrade:/freqtrade
+    restart: always
+
+  hummingbot:
+    image: hummingbot/hummingbot:latest
+    container_name: hummingbot
+    volumes:
+      - ../clones/hummingbot:/hummingbot
+    restart: always

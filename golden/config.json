@@ -1,0 +1,45 @@
+{
+  "api_key": "YOUR_OPENAI_API_KEY_HERE",
+  "dry_run": true,
+  "exchange": {
+    "pairlists": [
+      {
+        "method": "StaticPairList",
+        "pairs": [
+          "BTC/USD",
+          "ETH/USD"
+        ]
+      }
+    ],
+    "name": "kraken",
+    "key": "YOUR_KRAKEN_API_KEY_HERE",
+    "secret": "YOUR_KRAKEN_SECRET_HERE",
+    "ccxt_config": {},
+    "ccxt_async_config": {},
+    "pair_whitelist": [
+      "BTC/USD",
+      "ETH/USD"
+    ],
+    "pair_blacklist": []
+  },
+  "stake_currency": "USD",
+  "stake_amount": "unlimited",
+  "timeframe": "5m",
+  "strategy": "NeuroStrike",
+  "entry_pricing": {},
+  "exit_pricing": {},
+  "telegram": {
+    "token": "PLACEHOLDER_TOKEN",
+    "chat_id": "PLACEHOLDER_CHAT_ID",
+    "enabled": false
+  },
+  "pairlists": [
+    {
+      "method": "StaticPairList",
+      "pairs": [
+        "BTC/USD",
+        "ETH/USD"
+      ]
+    }
+  ]
+}

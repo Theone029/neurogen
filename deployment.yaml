@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: neurogen-deployment
+spec:
+  replicas: 3  # Number of pods to deploy for scaling (adjust as needed)
+  selector:
+    matchLabels:
+      app: neurogen
+  template:
+    metadata:
+      labels:
+        app: neurogen
+    spec:
+      containers:
+      - name: neurogen-container
+        image: your-docker-image-name  # Replace this with the NEUROGEN Docker image
+        ports:
+        - containerPort: 8080
+        resources:
+          limits:
+            memory: "8Gi"  # Adjust based on workload size
+            cpu: "4"
+          requests:
+            memory: "4Gi"
+            cpu: "2"
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: neurogen-service
+spec:
+  selector:
+    app: neurogen
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: LoadBalancer

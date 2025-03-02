@@ -1,0 +1,4 @@
+secrets.env
+.env
+clones/
+temp_strategies/

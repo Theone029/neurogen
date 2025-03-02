@@ -1,0 +1,34 @@
+2025-03-02 12:16:10,256 - hummingbot.core.utils.async_utils - ERROR - Unhandled error in background task: [Errno 2] No such file or directory: '/home/hummingbot/conf/connectors'
+Traceback (most recent call last):
+  File "/home/hummingbot/hummingbot/core/utils/async_utils.py", line 9, in safe_wrapper
+    return await c
+  File "/home/hummingbot/hummingbot/core/utils/async_call_scheduler.py", line 127, in call_async
+    return await self.schedule_async_call(coro, timeout_seconds, app_warning_msg=app_warning_msg)
+  File "/home/hummingbot/hummingbot/core/utils/async_call_scheduler.py", line 116, in schedule_async_call
+    return await fut
+  File "/home/hummingbot/hummingbot/core/utils/async_call_scheduler.py", line 79, in _coro_scheduler
+    fut.set_result(await coro)
+  File "/opt/conda/envs/hummingbot/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/hummingbot/hummingbot/client/config/security.py", line 63, in decrypt_all
+    encrypted_files = list_connector_configs()
+  File "/home/hummingbot/hummingbot/client/config/config_helpers.py", line 739, in list_connector_configs
+    Path(f.path) for f in scandir(str(CONNECTORS_CONF_DIR_PATH))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hummingbot/conf/connectors'
+2025-03-02 12:16:10,267 - hummingbot.core.utils.async_utils - ERROR - Unhandled error in background task: [Errno 2] No such file or directory: '/home/hummingbot/conf/connectors'
+Traceback (most recent call last):
+  File "/home/hummingbot/hummingbot/core/utils/async_utils.py", line 9, in safe_wrapper
+    return await c
+  File "/home/hummingbot/hummingbot/core/utils/async_call_scheduler.py", line 127, in call_async
+    return await self.schedule_async_call(coro, timeout_seconds, app_warning_msg=app_warning_msg)
+  File "/home/hummingbot/hummingbot/core/utils/async_call_scheduler.py", line 116, in schedule_async_call
+    return await fut
+  File "/home/hummingbot/hummingbot/core/utils/async_call_scheduler.py", line 79, in _coro_scheduler
+    fut.set_result(await coro)
+  File "/opt/conda/envs/hummingbot/lib/python3.10/concurrent/futures/thread.py", line 58, in run
+    result = self.fn(*self.args, **self.kwargs)
+  File "/home/hummingbot/hummingbot/client/config/security.py", line 63, in decrypt_all
+    encrypted_files = list_connector_configs()
+  File "/home/hummingbot/hummingbot/client/config/config_helpers.py", line 739, in list_connector_configs
+    Path(f.path) for f in scandir(str(CONNECTORS_CONF_DIR_PATH))
+FileNotFoundError: [Errno 2] No such file or directory: '/home/hummingbot/conf/connectors'
